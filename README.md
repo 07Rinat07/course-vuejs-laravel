@@ -18,4 +18,4 @@
 * npm update vue-loader
 * npm run dev
 * php artisan serve
-* npm run watch
+* npm run watch (each change starts the build automatically)
