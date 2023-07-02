@@ -2,37 +2,72 @@
 
     <div>
         <SinglePostComponent></SinglePostComponent>
-        <div>Name:{{name}}</div>
-        <div>Job:{{vasyaJob}}</div>
-        <button @click="sayhello">Hello bro</button>
-        <button @click="sayHi">Hi bro</button>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">name</th>
+                <th scope="col">age</th>
+                <th scope="col">job</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="person in persons">
+                <th scope="row">{{ person.id}}</th>
+                <td>{{ person.name}}</td>
+                <td>{{ person.age}}</td>
+                <td>{{ person.job}}</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </template>
 
 <script>
 import SinglePostComponent from "./SinglePostComponent.vue";
+
 export default {
     name: "PostComponent",
 
     data() {
-      return {
-          name: 'Vasya',
-          age: 25,
-      }
+        return {
+            persons: [
+                {
+                    id: 1,
+                    name: 'Vasya',
+                    age: 20,
+                    job: 'coach',
+                },
+                {
+                    id: 2,
+                    name: 'Elena',
+                    age: 18,
+                    job: 'rest',
+                },
+                {
+                    id: 3,
+                    name: 'Vladimir',
+                    age: 40,
+                    job: 'web developer',
+                },
+
+            ]
+
+        }
     },
 
     methods: {
-        sayhello(){
+        sayhello() {
             console.log('Hello bro')
         },
-        sayHi(){
+        sayHi() {
             console.log('Hi bro')
         }
     },
     computed: {
-      vasyaJob(){
-          return this.name + ' работает в булошной'
-      }
+        vasyaJob() {
+            return this.name + ' работает в булошной'
+        }
     },
 
     components: {
