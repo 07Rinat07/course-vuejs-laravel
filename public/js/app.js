@@ -5096,6 +5096,16 @@ __webpack_require__.r(__webpack_exports__);
         name: 'Vladimir',
         age: 40,
         job: 'web developer'
+      }, {
+        id: 4,
+        name: 'Oksana',
+        age: 25,
+        job: 'Disigner'
+      }, {
+        id: 5,
+        name: 'Olya',
+        age: 21,
+        job: 'Teacher'
       }]
     };
   },
@@ -5108,8 +5118,10 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   computed: {
-    vasyaJob: function vasyaJob() {
-      return this.name + ' работает в булошной';
+    personsAgeMoreTwenty: function personsAgeMoreTwenty() {
+      return this.persons.filter(function (person) {
+        return person.age > 20;
+      });
     }
   },
   components: {
@@ -5153,7 +5165,7 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", [_c("SinglePostComponent"), _vm._v(" "), _c("table", {
     staticClass: "table"
-  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.persons, function (person) {
+  }, [_vm._m(0), _vm._v(" "), _c("tbody", _vm._l(_vm.personsAgeMoreTwenty, function (person) {
     return _c("tr", [_c("th", {
       attrs: {
         scope: "row"
