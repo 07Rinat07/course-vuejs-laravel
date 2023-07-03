@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import SinglePostComponent from "./SinglePostComponent.vue";
 
 export default {
     name: "CreateComponent",
