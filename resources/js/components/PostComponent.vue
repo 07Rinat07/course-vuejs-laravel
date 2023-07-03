@@ -12,7 +12,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="person in personsAgeMoreTwenty">
+            <tr v-for="person in persons">
                 <th scope="row">{{ person.id}}</th>
                 <td>{{ person.name}}</td>
                 <td>{{ person.age}}</td>
@@ -31,60 +31,32 @@ export default {
 
     data() {
         return {
-            persons: [
-                {
-                    id: 1,
-                    name: 'Vasya',
-                    age: 20,
-                    job: 'coach',
-                },
-                {
-                    id: 2,
-                    name: 'Elena',
-                    age: 18,
-                    job: 'rest',
-                },
-                {
-                    id: 3,
-                    name: 'Vladimir',
-                    age: 40,
-                    job: 'web developer',
-                },
-                {
-                    id: 4,
-                    name: 'Oksana',
-                    age: 25,
-                    job: 'Disigner',
-                },
-                {
-                    id: 5,
-                    name: 'Olya',
-                    age: 21,
-                    job: 'Teacher',
-                },
-
-            ]
+            persons:null
 
         }
+    },
+
+    mounted()
+    {
+        this.getPersons()
     },
 
     methods: {
-        sayhello() {
-            console.log('Hello bro')
-        },
-        sayHi() {
-            console.log('Hi bro')
-        }
+      getPersons()
+      {
+          axios.get('/persons')
+              .then( res => {
+                  this.persons = res.data
+              })
+              .catch( error => {
+              })
+              .finally({
+
+              })
+      }
     },
 
-    computed: {
-      personsAgeMoreTwenty() {
-            return this.persons.filter(function (person)
-            {
-               return person.age > 20
-            })
-        }
-    },
+
 
     components: {
         SinglePostComponent
