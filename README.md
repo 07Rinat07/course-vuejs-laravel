@@ -6,6 +6,9 @@
 <p align="center">
 </p>
 
+<div align="center">
+<a href="https://vuejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/vuejs-original-wordmark.svg" alt="Vue.js" height="50" /></a>
+
 ### Brief instructions for installing and configuring the educational project
 
 * composer create-project laravel/laravel:^8.0 example-app
@@ -20,8 +23,4 @@
 * php artisan serve
 * npm run watch (each change starts the build automatically)
 
-
-<div align="center">  
-
-<a href="https://vuejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/vuejs-original-wordmark.svg" alt="Vue.js" height="50" /></a> 
 
