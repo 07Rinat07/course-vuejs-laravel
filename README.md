@@ -8,9 +8,9 @@
 
 <div align="center">
 <a href="https://vuejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/vuejs-original-wordmark.svg" alt="Vue.js" height="50" /></a>
+</div>
 
 ### Brief instructions for installing and configuring the educational project
-
 * composer create-project laravel/laravel:^8.0 example-app
 * In file .env input value and setting database
 * php artisan migrate
