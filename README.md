@@ -19,3 +19,9 @@
 * npm run dev
 * php artisan serve
 * npm run watch (each change starts the build automatically)
+
+
+<div align="center">  
+
+<a href="https://vuejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/vuejs-original-wordmark.svg" alt="Vue.js" height="50" /></a> 
+
