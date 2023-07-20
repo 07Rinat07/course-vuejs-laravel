@@ -1,5 +1,4 @@
 <template>
-
     <div>
         <table class="table">
             <thead>
@@ -55,6 +54,9 @@ export default {
     },
     mounted() {
         this.getPeople()
+
+
+
     },
 
     methods: {
@@ -80,23 +82,24 @@ export default {
                 })
         },
 
-            changeEditPersonId(id, name, age, job)
-            {
-                this.editPersonId = id
-                this.name = name
-                this.age = age
-                this.job = job
-            },
+        changeEditPersonId(id, name, age, job) {
+            this.editPersonId = id
+            this.name = name
+            this.age = age
+            this.job = job
+        },
 
 
-            isEdit(id)
-            {
-                return this.editPersonId === id
-            }
-
+        isEdit(id) {
+            return this.editPersonId === id
+        },
+        indexLog() {
+            console.log('this is index component');
         }
 
     }
+
+}
 </script>
 
 

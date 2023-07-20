@@ -13,11 +13,12 @@
         <div class="mb-3">
             <input @click.prevent="addPerson" class="btn btn-primary" value="Добавить">
         </div>
+        <SomeComponent></SomeComponent>
     </div>
 </template>
 
 <script>
-
+import SomeComponent from "./SomeComponent.vue";
 export default {
     name: "CreateComponent",
 
@@ -28,6 +29,13 @@ export default {
             job: null,
         }
     },
+    mounted() {
+
+    },
+    components: {
+        SomeComponent
+    },
+
     methods: {
         addPerson() {
             axios.post('/api/people', {name: this.name, age: this.age, job: this.job})
