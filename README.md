@@ -19,6 +19,8 @@
 * php artisan ui bootstrap
 * php artisan ui vue
 * npm update vue-loader
+
+### For start
 * npm run dev
 * php artisan serve
 * npm run watch (each change starts the build automatically)
