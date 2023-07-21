@@ -5083,7 +5083,12 @@ __webpack_require__.r(__webpack_exports__);
     return {
       name: null,
       age: null,
-      job: null
+      job: null,
+      obj: {
+        color: 'yellow',
+        number: 50,
+        isPubliched: false
+      }
     };
   },
   mounted: function mounted() {},
@@ -5227,6 +5232,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
+  props: ['obj'],
   mounted: function mounted() {
     this.$parent.$parent.parentLog();
   },
@@ -5337,7 +5343,11 @@ var render = function render() {
         return _vm.addPerson.apply(null, arguments);
       }
     }
-  })]), _vm._v(" "), _c("SomeComponent")], 1);
+  })]), _vm._v(" "), _c("SomeComponent", {
+    attrs: {
+      obj: _vm.obj
+    }
+  })], 1);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -5545,7 +5555,7 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div");
+  return _c("div", [_c("div", [_vm._v("Color:" + _vm._s(_vm.obj.color))]), _vm._v(" "), _c("div", [_vm._v("Number:" + _vm._s(_vm.obj.number > 10 ? "more 10" : "less 10"))]), _vm._v(" "), _c("div", [_vm._v("Is published:" + _vm._s(_vm.obj.isPublished ? "Published" : "Not published"))])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
