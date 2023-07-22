@@ -5098,11 +5098,15 @@ var render = function render() {
     _c = _vm._self._c;
   return _c("div", [_c("router-link", {
     attrs: {
-      to: "{name: 'peron.index'}"
+      to: {
+        name: "person.index"
+      }
     }
   }, [_vm._v("People")]), _vm._v(" "), _c("router-link", {
     attrs: {
-      to: "{name: 'peron.create'}"
+      to: {
+        name: "person.create"
+      }
     }
   }, [_vm._v("Add")]), _vm._v(" "), _c("router-view")], 1);
 };
@@ -5197,13 +5201,13 @@ vue__WEBPACK_IMPORTED_MODULE_0__["default"].use(vue_router__WEBPACK_IMPORTED_MOD
   routes: [{
     path: '/people',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ "resources_js_components_Person_Index_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Person/Index.vue */ "./resources/js/components/Person/Index.vue"));
+      return __webpack_require__.e(/*! import() */ "resources_js_components_Person_Index_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Person/Index */ "./resources/js/components/Person/Index.vue"));
     },
     name: 'person.index'
   }, {
     path: '/people/create',
     component: function component() {
-      return __webpack_require__.e(/*! import() */ "resources_js_components_Person_Create_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Person/Create.vue */ "./resources/js/components/Person/Create.vue"));
+      return __webpack_require__.e(/*! import() */ "resources_js_components_Person_Create_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Person/Create */ "./resources/js/components/Person/Create.vue"));
     },
     name: 'person.create'
   }]
