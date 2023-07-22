@@ -11,7 +11,11 @@ export default new VueRouter({
         {
             path: '/people', component: ()=> import('./components/Person/Index.vue'),
             name: 'person.index'
-        }
+        },
+        {
+            path: '/people/create', component: ()=> import('./components/Person/Create.vue'),
+            name: 'person.create'
+        },
     ]
 })
 
