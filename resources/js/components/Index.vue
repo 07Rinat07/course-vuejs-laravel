@@ -1,8 +1,7 @@
 
 <template>
     <div>
-       <router-link to="/posts">Posts</router-link>
-       <router-link to="/tags">Tags</router-link>
+        <router-link to="{name: 'peron.index'}">People</router-link>
         <router-view></router-view>
     </div>
 </template>

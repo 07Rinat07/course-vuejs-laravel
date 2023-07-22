@@ -1,18 +1,17 @@
-
 <template>
+
     <div>
-        post component
+        Create
     </div>
+
+
 </template>
 
 <script>
 export default {
-    name: "PostComponent"
+    name: "Create"
 }
-
 </script>
-
-
 
 <style scoped>
 
