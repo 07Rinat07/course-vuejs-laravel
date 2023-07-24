@@ -31,6 +31,10 @@ export default {
         }
     },
 
+   beforeDestroy() {
+        this.somelog()
+    },
+
     methods: {
         store() {
             axios.post('/api/people', {name: this.name, age: this.age, job: this.job})
@@ -38,6 +42,10 @@ export default {
                     this.$router.push({ name: 'person.index'})
                 })
         },
+
+        somelog() {
+            console.log(123232145625265);
+        }
     },
     computed: {
         isDisabled() {

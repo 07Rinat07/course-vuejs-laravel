@@ -20,6 +20,9 @@ __webpack_require__.r(__webpack_exports__);
       job: null
     };
   },
+  beforeDestroy: function beforeDestroy() {
+    this.somelog();
+  },
   methods: {
     store: function store() {
       var _this = this;
@@ -32,6 +35,9 @@ __webpack_require__.r(__webpack_exports__);
           name: 'person.index'
         });
       });
+    },
+    somelog: function somelog() {
+      console.log(123232145625265);
     }
   },
   computed: {

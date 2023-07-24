@@ -8,8 +8,17 @@
 </template>
 
 <script>
+
 export default  {
-    name: "Index"
+    name: "Index",
+    data() {
+        return {
+            name: 'Bob'
+        }
+    },
+    mounted() {
+
+    }
 }
 
 </script>
